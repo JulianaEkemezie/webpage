@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY FIRST PAGE</title>
+    <style>
+        a {
+            color: #e29f9b;
+            font-size: 15px;
+        }
+
+        a:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        button {
+            background-color: #e29f9b;
+            border: 1px solid #e29f9b;
+            border-radius: 4px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 15px;
+            margin-top: 8px;
+            padding: 5px;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #e29f9b;
+            cursor: pointer;
+        }
+
+        blockquote {
+            border: 1px solid#e29f9b;
+            background-color: #e29f9b;
+            color: #f4dcdc;
+            border-radius: 4px;
+            font-size: 20px;
+            line-height: 1.5;
+            padding: 8px;
+        }
+
+        blockquote:hover {
+            border: 1px solid #2b2828;
+            color: #2b2828;
+            background-color: #f4dcdc;
+
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin: 0 auto;
+            color: #e29f9b;
+            border: 1px solid#f4dcdc;
+            padding-top: 20px;
+        }
+
+        h2 {
+            margin-top: 0 auto;
+            font-size: 25px;
+        }
+
+        img {
+            border-radius: 7px;
+        }
+
+        li {
+            background-color: #e29f9b;
+            display: inline-block;
+            list-style-type: none;
+
+        }
+
+        p {
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        span {
+            font-family: monospace;
+            font-size: 15px;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+            font-family: sans-serif;
+            background: linear-gradient(#f4dcdc, #FFC2C4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CHRISTIAN MANDATE ORGANISATION <br>(CMO)</h1>
+
+        <h2> Foundation School🎓</h2>
+        <hr />
+        <blockquote>
+            "Study and do your best to present yourself to God approved, a workman
+            [tested by trial] who has no reason to be ashamed, accurately handling
+            and skillfully teaching the word of truth.<br />
+            <strong> 2 Timothy 2:15 (AMP)"</strong>
+        </blockquote>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTN7klH9KOrhkWsljF-9FovaZS8YEP7Lt5VHg&usqp=CAU"
+            width="400px" alt="graduating students" />
+        <blockquote>
+            The foundation school is an arm of christian mandate organistion aimed
+            at teaching its members the <em>basic doctrines of Christ</em>. They are equipped
+            for the work of the ministry. The bible also admonishes that we be not
+            children tossed to and fro by every wind of doctrine…hence the need to
+            equip the saints. Knowledge is vital, and it marks the difference
+            between success and failure.
+        </blockquote>
+        <span>Join the foundation school today!!!</span>
+
+        <br>
+        <button>Register now!</button>
+        <p>for a limited number of spots</p>
+        <a href="http://www.celvz.org/foundationschool.php" target="_blank">website</a>
+
+
+        <script>
+            function update(newUpdate) {
+                let heading = document.querySelector("h1")
+                heading.innerHTML = newUpdate
+            }
+
+            function register() {
+                let firstName = prompt("What is your first name?")
+                alert(`${firstName} You're welcome to our registration Portal!`)
+
+                let church = prompt("What church do you attend?")
+                church = church.toLowerCase()
+                let age = prompt("How old are you?")
+
+                if (church === "christ embassy" && age >= 15) {
+                    update(`Congratulations ${firstName}! Your registration was successful🎊`)
+                } else {
+                    update(`Sorry😟 ${firstName} You can't register!`)
+                }
+            }
+
+            let buttonClick = document.querySelector("button")
+            buttonClick.addEventListener("click", register)
+        </script>
+
+</body>
+
+</html>
